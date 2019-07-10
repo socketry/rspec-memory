@@ -2,7 +2,7 @@
 
 Make assertions about memory usage.
 
-[![Build Status](https://travis-ci.com/socketry/rspec-memory.svg)](https://travis-ci.com/socketry/rspec-memory)
+[![Build Status](https://travis-ci.com/socketry/rspec-memory.svg?branch=master)](https://travis-ci.com/socketry/rspec-memory)
 
 ## Installation
 
