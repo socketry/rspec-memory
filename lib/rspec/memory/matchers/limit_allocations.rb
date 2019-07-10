@@ -27,7 +27,7 @@ module RSpec
 	module Memory
 		module Matchers
 			class LimitAllocations
-				include ::RSpec::Matchers::Composable
+				include RSpec::Matchers::Composable
 				
 				def initialize(allocations = {}, count: nil, size: nil)
 					@count = count
