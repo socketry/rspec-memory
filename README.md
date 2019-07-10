@@ -23,7 +23,7 @@ Or install it yourself as:
 Finally, add this require statement to the top of `spec/spec_helper.rb`
 
 ```ruby
-require 'async/rspec'
+require 'rspec/memory'
 ```
 
 ## Usage

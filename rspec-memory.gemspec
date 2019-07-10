@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
 	spec.authors       = ["Samuel Williams"]
 	spec.email         = ["samuel.williams@oriontransfer.co.nz"]
 
-	spec.summary       = "Matches for checking memory allocations."
+	spec.summary       = "RSpec helpers for checking memory allocations."
 	spec.homepage      = "https://github.com/socketry/rspec-memory"
 
 	spec.files         = `git ls-files -z`.split("\x0").reject do |f|
