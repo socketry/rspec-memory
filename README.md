@@ -28,7 +28,7 @@ require 'rspec/memory'
 
 ## Usage
 
-Allocating large amounts of objects can lead to memery problems. `RSpec::Memory` adds a `limit_allocations` matcher, which tracks the number of allocations and memory size for each object type and allows you to specify expected limits.
+Allocating large amounts of objects can lead to memory problems. `RSpec::Memory` adds a `limit_allocations` matcher, which tracks the number of allocations and memory size for each object type and allows you to specify expected limits.
 
 ```ruby
 RSpec.describe "memory allocations" do
