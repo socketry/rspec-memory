@@ -4,6 +4,7 @@ require_relative 'lib/rspec/memory/version'
 Gem::Specification.new do |spec|
 	spec.name          = "rspec-memory"
 	spec.version       = RSpec::Memory::VERSION
+	spec.licenses      = ["MIT"]
 	spec.authors       = ["Samuel Williams"]
 	spec.email         = ["samuel.williams@oriontransfer.co.nz"]
 
