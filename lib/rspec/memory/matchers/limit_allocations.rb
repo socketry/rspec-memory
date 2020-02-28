@@ -105,8 +105,14 @@ module RSpec
 				end
 			end
 			
-			def limit_allocations(*args)
-				LimitAllocations.new(*args)
+			if respond_to?(:ruby2_keywords, true)
+				def limit_allocations(count: nil, size: nil, **allocations)
+					LimitAllocations.new(allocations, count: count, size: size)
+				end
+			else
+				def limit_allocations(*arguments)
+					LimitAllocations.new(*arguments)
+				end
 			end
 		end
 	end
