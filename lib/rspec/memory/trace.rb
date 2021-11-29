@@ -23,7 +23,7 @@ require 'objspace'
 module RSpec
 	module Memory
 		Allocation = Struct.new(:count, :size) do
-			SLOT_SIZE = 40
+			SLOT_SIZE = ObjectSpace.memsize_of(Object.new)
 			
 			def << object
 				self.count += 1
