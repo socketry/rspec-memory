@@ -2,27 +2,27 @@
 
 Make assertions about memory usage.
 
-[![Build Status](https://travis-ci.com/socketry/rspec-memory.svg?branch=master)](https://travis-ci.com/socketry/rspec-memory)
+[![Development Status](https://github.com/socketry/rspec-memory/workflows/Development/badge.svg)](https://github.com/socketry/rspec-memory/actions?workflow=Development)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
+``` ruby
 gem 'rspec-memory'
 ```
 
 And then execute:
 
-	$ bundle
+    $ bundle
 
 Or install it yourself as:
 
-	$ gem install rspec-memory
-	
+    $ gem install rspec-memory
+
 Finally, add this require statement to the top of `spec/spec_helper.rb`
 
-```ruby
+``` ruby
 require 'rspec/memory'
 ```
 
@@ -30,7 +30,7 @@ require 'rspec/memory'
 
 Allocating large amounts of objects can lead to memory problems. `RSpec::Memory` adds a `limit_allocations` matcher, which tracks the number of allocations and memory size for each object type and allows you to specify expected limits.
 
-```ruby
+``` ruby
 RSpec.describe "memory allocations" do
 	include_context RSpec::Memory
 	
@@ -56,11 +56,11 @@ end
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+1.  Fork it
+2.  Create your feature branch (`git checkout -b my-new-feature`)
+3.  Commit your changes (`git commit -am 'Add some feature'`)
+4.  Push to the branch (`git push origin my-new-feature`)
+5.  Create new Pull Request
 
 ## License
 
