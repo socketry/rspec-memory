@@ -77,16 +77,6 @@ Layout/MultilineAssignmentLayout:
   Exclude:
     - 'lib/rspec/memory/trace.rb'
 
-# Offense count: 16
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
-# SupportedStyles: space, no_space
-# SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideBlockBraces:
-  Exclude:
-    - 'lib/rspec/memory/trace.rb'
-    - 'spec/rspec/memory_spec.rb'
-
 # Offense count: 61
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowInHeredoc.
