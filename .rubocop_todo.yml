@@ -369,20 +369,6 @@ Style/ReturnNil:
   Exclude:
     - 'lib/rspec/memory/trace.rb'
 
-# Offense count: 37
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'Guardfile'
-    - 'gems.rb'
-    - 'lib/rspec/memory/trace.rb'
-    - 'lib/rspec/memory/version.rb'
-    - 'rspec-memory.gemspec'
-    - 'spec/rspec/memory_spec.rb'
-    - 'spec/spec_helper.rb'
-
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.

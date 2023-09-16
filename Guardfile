@@ -7,7 +7,7 @@ RSPEC_CONFIG = {
 }.freeze
 
 guard :rspec, RSPEC_CONFIG do
-  require "guard/rspec/dsl"
+  require 'guard/rspec/dsl'
   dsl = Guard::RSpec::Dsl.new(self)
 
   # Feel free to open issues for suggestions and improvements

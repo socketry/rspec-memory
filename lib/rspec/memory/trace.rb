@@ -26,7 +26,7 @@ module RSpec
     class Trace
       def self.supported?
         # There are issues on truffleruby-1.0.0rc9
-        return false if RUBY_ENGINE == "truffleruby"
+        return false if RUBY_ENGINE == 'truffleruby'
         
         ObjectSpace.respond_to?(:trace_object_allocations)
       end
