@@ -32,7 +32,7 @@ RSpec.describe RSpec::Memory do
     it 'should fail if there are untracked allocations' do
       expect do
         expect do
-          Array.new
+          []
         end.to limit_allocations
       end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /it was not specified/)
     end
