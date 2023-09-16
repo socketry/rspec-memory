@@ -90,27 +90,6 @@ Lint/StructNewOverride:
     - 'lib/rspec/memory/trace.rb'
 
 # Offense count: 2
-# Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes.
-Metrics/AbcSize:
-  Max: 37
-
-# Offense count: 2
-# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
-# AllowedMethods: refine
-Metrics/BlockLength:
-  Max: 61
-
-# Offense count: 1
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-Metrics/CyclomaticComplexity:
-  Max: 9
-
-# Offense count: 1
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-Metrics/PerceivedComplexity:
-  Max: 10
-
-# Offense count: 2
 # Configuration parameters: IgnoreModules.
 Style/ConstantVisibility:
   Exclude:
