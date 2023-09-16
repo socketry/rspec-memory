@@ -97,7 +97,10 @@ module RSpec
           else
             # If the user specified classes, but we can't pin this allocation to a specific class, we issue a warning.
             if @klasses.any?
-              warn "Ignoring allocation of #{object.class} at #{ObjectSpace.allocation_sourcefile(object)}:#{ObjectSpace.allocation_sourceline(object)}"
+              file = ObjectSpace.allocation_sourcefile(object)
+              line = ObjectSpace.allocation_sourceline(object)
+
+              warn "Ignoring allocation of #{object.class} at #{file}:#{line}"
             end
 
             @ignored[object.class] << object
