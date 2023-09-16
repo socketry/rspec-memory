@@ -162,14 +162,6 @@ Naming/BlockForwarding:
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
 
-# Offense count: 4
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: separated, grouped
-Style/AccessorGrouping:
-  Exclude:
-    - 'lib/rspec/memory/trace.rb'
-
 # Offense count: 2
 # Configuration parameters: IgnoreModules.
 Style/ConstantVisibility:

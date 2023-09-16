@@ -56,12 +56,7 @@ module RSpec
         @total = Allocation.new(0, 0)
       end
 
-      attr_reader :allocated
-      attr_reader :retained
-
-      attr_reader :ignored
-
-      attr_reader :total
+      attr_reader :allocated, :retained, :ignored, :total
 
       def current_objects(generation)
         allocations = []
