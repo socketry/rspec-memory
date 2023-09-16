@@ -11,7 +11,7 @@ module RSpec
     Allocation = Struct.new(:count, :size) do
       SLOT_SIZE = ObjectSpace.memsize_of(Object.new)
       
-      def << object
+      def <<(object)
         self.count += 1
         
         # We don't want to force specs to take the slot size into account.
