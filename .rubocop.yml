@@ -11,3 +11,6 @@ Style/Copyright:
 
 Style/MethodCallWithArgsParentheses:
   Enabled: false
+
+Layout/RedundantLineBreak:
+  Enabled: false
