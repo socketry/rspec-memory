@@ -32,8 +32,8 @@ module RSpec
       end
       
       if supported?
-        def self.capture(*args, &block)
-          new(*args).tap do |trace|
+        def self.capture(*, &block)
+          new(*).tap do |trace|
             trace.capture(&block)
           end
         end

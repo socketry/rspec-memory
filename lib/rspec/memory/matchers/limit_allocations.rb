@@ -98,8 +98,8 @@ module RSpec
           LimitAllocations.new(allocations, count:, size:)
         end
       else
-        def limit_allocations(*arguments)
-          LimitAllocations.new(*arguments)
+        def limit_allocations(*)
+          LimitAllocations.new(*)
         end
       end
     end
