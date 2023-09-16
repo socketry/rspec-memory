@@ -8,20 +8,21 @@ require 'objspace'
 
 module RSpec
   module Memory
-    Allocation = Struct.new(:count, :size) do
-      SLOT_SIZE = ObjectSpace.memsize_of(Object.new)
+    Allocation =
+      Struct.new(:count, :size) do
+        SLOT_SIZE = ObjectSpace.memsize_of(Object.new)
 
-      def <<(object)
-        self.count += 1
+        def <<(object)
+          self.count += 1
 
-        # We don't want to force specs to take the slot size into account.
-        self.size += ObjectSpace.memsize_of(object) - SLOT_SIZE
+          # We don't want to force specs to take the slot size into account.
+          self.size += ObjectSpace.memsize_of(object) - SLOT_SIZE
+        end
+
+        def self.default_hash
+          Hash.new { |h, k| h[k] = Allocation.new(0, 0) }
+        end
       end
-
-      def self.default_hash
-        Hash.new { |h, k| h[k] = Allocation.new(0, 0) }
-      end
-    end
 
     class Trace
       def self.supported?
