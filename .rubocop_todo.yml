@@ -213,16 +213,6 @@ Style/MethodCalledOnDoEndBlock:
   Exclude:
     - 'spec/rspec/memory_spec.rb'
 
-# Offense count: 7
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: if, case, both
-Style/MissingElse:
-  Exclude:
-    - 'lib/rspec/memory/matchers/limit_allocations.rb'
-    - 'lib/rspec/memory/trace.rb'
-    - 'spec/rspec/memory_spec.rb'
-
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.

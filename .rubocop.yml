@@ -14,3 +14,6 @@ Style/MethodCallWithArgsParentheses:
 
 Layout/RedundantLineBreak:
   Enabled: false
+
+Style/MissingElse:
+  Enabled: false
