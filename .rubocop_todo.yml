@@ -213,14 +213,6 @@ Style/AccessorGrouping:
   Exclude:
     - 'lib/rspec/memory/trace.rb'
 
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, conditionals
-Style/AndOr:
-  Exclude:
-    - 'lib/rspec/memory/matchers/limit_allocations.rb'
-
 # Offense count: 2
 # Configuration parameters: IgnoreModules.
 Style/ConstantVisibility:

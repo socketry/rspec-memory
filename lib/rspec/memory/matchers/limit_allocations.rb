@@ -51,7 +51,7 @@ module RSpec
         def matches?(given_proc)
           return true unless trace = Trace.capture(@allocations.keys, &given_proc)
           
-          if @count or @size
+          if @count || @size
             # If the spec specifies a total limit, we have a limit which we can enforce which takes all allocations into account:
             total = trace.total
             
