@@ -23,7 +23,14 @@ guard :rspec, RSPEC_CONFIG do
   dsl.watch_spec_files_for(ruby.lib_files)
 end
 
-guard :rubocop do
-  watch(%r{.+\.rb$})
-  watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
+RUBOCOP_CONFIG = {
+  cli: '--display-cop-names --parallel',
+  all_on_start: true,
+  halt_on_fail: true
+}.freeze
+
+guard :rubocop, RUBOCOP_CONFIG do
+  watch(/.+\.rb$/)
+  watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| ::File.dirname(m[0]) }
+  watch('Guardfile')
 end
