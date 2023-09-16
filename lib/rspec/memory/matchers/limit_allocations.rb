@@ -35,15 +35,6 @@ module RSpec
           self
         end
 
-        private def check(value, limit)
-          case limit
-          when Range
-            yield "expected within #{limit}" unless limit.include? value
-          when Integer
-            yield "expected exactly #{limit}" unless value == limit
-          end
-        end
-
         def matches?(given_proc)
           return true unless trace = Trace.capture(@allocations.keys, &given_proc)
 
@@ -82,6 +73,17 @@ module RSpec
           end
 
           @errors.empty?
+        end
+
+        private
+
+        def check(value, limit)
+          case limit
+          when Range
+            yield "expected within #{limit}" unless limit.include? value
+          when Integer
+            yield "expected exactly #{limit}" unless value == limit
+          end
         end
 
         def failure_message

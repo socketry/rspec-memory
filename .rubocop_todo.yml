@@ -155,13 +155,6 @@ Naming/BlockForwarding:
   Exclude:
     - 'lib/rspec/memory/trace.rb'
 
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowModifiersOnSymbols.
-# SupportedStyles: inline, group
-Style/AccessModifierDeclarations:
-  EnforcedStyle: inline
-
 # Offense count: 2
 # Configuration parameters: IgnoreModules.
 Style/ConstantVisibility:
