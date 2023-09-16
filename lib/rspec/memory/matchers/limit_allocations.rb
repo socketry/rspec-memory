@@ -21,7 +21,7 @@ module RSpec
           @errors = []
           
           allocations.each do |klass, count|
-            self.of(klass, count: count)
+            of(klass, count: count)
           end
         end
         

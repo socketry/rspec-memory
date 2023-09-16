@@ -33,7 +33,7 @@ module RSpec
       
       if supported?
         def self.capture(*args, &block)
-          self.new(*args).tap do |trace|
+          new(*args).tap do |trace|
             trace.capture(&block)
           end
         end
