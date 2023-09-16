@@ -21,7 +21,7 @@ module RSpec
           @errors = []
           
           allocations.each do |klass, count|
-            of(klass, count: count)
+            of(klass, count:)
           end
         end
         
@@ -95,7 +95,7 @@ module RSpec
       
       if respond_to?(:ruby2_keywords, true)
         def limit_allocations(count: nil, size: nil, **allocations)
-          LimitAllocations.new(allocations, count: count, size: size)
+          LimitAllocations.new(allocations, count:, size:)
         end
       else
         def limit_allocations(*arguments)
