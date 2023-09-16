@@ -2,3 +2,7 @@ inherit_from: .rubocop_todo.yml
 
 AllCops:
   NewCops: enable
+  EnabledByDefault: true
+
+Style/Copyright:
+  Enabled: false
