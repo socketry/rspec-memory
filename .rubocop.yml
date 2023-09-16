@@ -17,3 +17,9 @@ Layout/RedundantLineBreak:
 
 Style/MissingElse:
   Enabled: false
+
+Layout/LineLength:
+  Max: 129
+
+Metrics/MethodLength:
+  Max: 29

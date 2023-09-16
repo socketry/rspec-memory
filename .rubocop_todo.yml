@@ -105,11 +105,6 @@ Metrics/BlockLength:
 Metrics/CyclomaticComplexity:
   Max: 9
 
-# Offense count: 2
-# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
-Metrics/MethodLength:
-  Max: 28
-
 # Offense count: 1
 # Configuration parameters: AllowedMethods, AllowedPatterns.
 Metrics/PerceivedComplexity:
@@ -144,10 +139,3 @@ Style/DocumentationMethod:
 Style/MethodCalledOnDoEndBlock:
   Exclude:
     - 'spec/rspec/memory_spec.rb'
-
-# Offense count: 4
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.
-# URISchemes: http, https
-Layout/LineLength:
-  Max: 152
