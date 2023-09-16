@@ -17,4 +17,5 @@ group :test do
 	gem "bake-test"
 	gem "bake-test-external"
 	gem "guard-rspec", "~> 4.7"
+	gem "guard-rubocop", "~> 1.5"
 end
