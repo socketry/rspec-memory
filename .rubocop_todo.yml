@@ -61,14 +61,6 @@ Gemspec/RequiredRubyVersion:
     - 'rspec-memory.gemspec'
 
 # Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: Categories, ExpectedOrder.
-# ExpectedOrder: module_inclusion, constants, public_class_methods, initializer, public_methods, protected_methods, private_methods
-Layout/ClassStructure:
-  Exclude:
-    - 'lib/rspec/memory/matchers/limit_allocations.rb'
-
-# Offense count: 1
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: enums
 Lint/ConstantDefinitionInBlock:
