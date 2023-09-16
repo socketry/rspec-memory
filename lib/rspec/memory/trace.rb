@@ -32,13 +32,13 @@ module RSpec
       end
 
       if supported?
-        def self.capture(*, &block)
+        def self.capture(*, &)
           new(*).tap do |trace|
-            trace.capture(&block)
+            trace.capture(&)
           end
         end
       else
-        def self.capture(*args, &block)
+        def self.capture(*args, &)
           yield
 
           nil
@@ -72,14 +72,14 @@ module RSpec
         @klasses.find { |klass| object.is_a? klass }
       end
 
-      def capture(&block)
+      def capture(&)
         GC.start
 
         begin
           GC.disable
 
           generation = GC.count
-          ObjectSpace.trace_object_allocations(&block)
+          ObjectSpace.trace_object_allocations(&)
 
           allocated = current_objects(generation)
         ensure
