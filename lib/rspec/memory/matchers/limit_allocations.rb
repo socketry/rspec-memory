@@ -12,29 +12,29 @@ module RSpec
     module Matchers
       class LimitAllocations
         include RSpec::Matchers::Composable
-        
+
         def initialize(allocations = {}, count: nil, size: nil)
           @count = count
           @size = size
-          
+
           @allocations = {}
           @errors = []
-          
+
           allocations.each do |klass, count|
             of(klass, count:)
           end
         end
-        
+
         def supports_block_expectations?
           true
         end
-        
+
         def of(klass, **limits)
           @allocations[klass] = limits
-          
+
           self
         end
-        
+
         private def check(value, limit)
           case limit
           when Range
@@ -47,20 +47,20 @@ module RSpec
             end
           end
         end
-        
+
         def matches?(given_proc)
           return true unless trace = Trace.capture(@allocations.keys, &given_proc)
-          
+
           if @count || @size
             # If the spec specifies a total limit, we have a limit which we can enforce which takes all allocations into account:
             total = trace.total
-            
+
             if @count
               check(total.count, @count) do |expected|
                 @errors << "allocated #{total.count} instances, #{total.size} bytes, #{expected} instances"
               end
             end
-            
+
             if @size
               check(total.size, @size) do |expected|
                 @errors << "allocated #{total.count} instances, #{total.size} bytes, #{expected} bytes"
@@ -72,27 +72,27 @@ module RSpec
               @errors << "allocated #{allocation.count} #{klass} instances, #{allocation.size} bytes, but it was not specified"
             end
           end
-          
+
           trace.allocated.each do |klass, allocation|
             next unless acceptable = @allocations[klass]
-            
+
             check(allocation.count, acceptable[:count]) do |expected|
               @errors << "allocated #{allocation.count} #{klass} instances, #{allocation.size} bytes, #{expected} instances"
             end
-            
+
             check(allocation.size, acceptable[:size]) do |expected|
               @errors << "allocated #{allocation.count} #{klass} instances, #{allocation.size} bytes, #{expected} bytes"
             end
           end
-          
+
           @errors.empty?
         end
-        
+
         def failure_message
           "exceeded allocation limit: #{@errors.join(', ')}"
         end
       end
-      
+
       if respond_to?(:ruby2_keywords, true)
         def limit_allocations(count: nil, size: nil, **allocations)
           LimitAllocations.new(allocations, count:, size:)
