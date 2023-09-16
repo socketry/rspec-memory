@@ -23,11 +23,15 @@ guard :rspec, RSPEC_CONFIG do
   # Ruby files
   ruby = dsl.ruby
   dsl.watch_spec_files_for(ruby.lib_files)
+
+  %w[matchers/limit_allocations.rb trace.rb].each do |file_path|
+    watch("lib/rspec/memory/#{file_path}") { 'spec/rspec/memory_spec.rb' }
+  end
 end
 
 RUBOCOP_CONFIG = {
   cli: '--display-cop-names --parallel',
-  all_on_start: true,
+  all_on_start: false,
   halt_on_fail: true
 }.freeze
 
