@@ -19,7 +19,7 @@ module RSpec
       end
       
       def self.default_hash
-        Hash.new{|h, k| h[k] = Allocation.new(0, 0)}
+        Hash.new {|h, k| h[k] = Allocation.new(0, 0)}
       end
     end
     
@@ -76,7 +76,7 @@ module RSpec
       end
       
       def find_base(object)
-        @klasses.find{|klass| object.is_a? klass}
+        @klasses.find {|klass| object.is_a? klass}
       end
       
       def capture(&block)

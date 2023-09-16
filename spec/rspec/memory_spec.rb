@@ -21,11 +21,11 @@ RSpec.describe RSpec::Memory do
   context 'on supported platform', if: RSpec::Memory::Trace.supported? do
     it 'should not exceed specified count limit' do
       expect do
-        2.times{String.new}
+        2.times {String.new}
       end.to limit_allocations(String => 2)
       
       expect do
-        2.times{String.new}
+        2.times {String.new}
       end.to limit_allocations.of(String, count: 2)
     end
     
@@ -41,7 +41,7 @@ RSpec.describe RSpec::Memory do
       it 'should exceed specified count limit' do
         expect do
           expect do
-            6.times{String.new}
+            6.times {String.new}
           end.to limit_allocations(String => 4)
         end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /expected exactly 4 instances/)
       end
@@ -49,18 +49,18 @@ RSpec.describe RSpec::Memory do
     
     it 'should be within specified count range' do
       expect do
-        2.times{String.new}
+        2.times {String.new}
       end.to limit_allocations(String => 1..3)
 
       expect do
-        2.times{String.new}
+        2.times {String.new}
       end.to limit_allocations.of(String, count: 1..3)
     end
     
     it 'should exceed specified count range' do
       expect do
         expect do
-          6.times{String.new}
+          6.times {String.new}
         end.to limit_allocations(String => 1..3)
       end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /expected within 1..3 instances/)
     end
