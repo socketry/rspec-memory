@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSPEC_CONFIG = {
   cmd: 'bundle exec rspec',
   all_on_start: true,
