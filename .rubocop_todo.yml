@@ -77,14 +77,6 @@ Layout/MultilineAssignmentLayout:
   Exclude:
     - 'lib/rspec/memory/trace.rb'
 
-# Offense count: 4
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowSafeAssignment.
-Lint/AssignmentInCondition:
-  Exclude:
-    - 'lib/rspec/memory/matchers/limit_allocations.rb'
-    - 'lib/rspec/memory/trace.rb'
-
 # Offense count: 1
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: enums

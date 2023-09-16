@@ -36,7 +36,7 @@ module RSpec
         end
 
         def matches?(given_proc)
-          return true unless trace = Trace.capture(@allocations.keys, &given_proc)
+          return true unless (trace = Trace.capture(@allocations.keys, &given_proc))
 
           if @count || @size
             # If the spec specifies a total limit, we have a limit which we can enforce which takes all allocations into account:
@@ -61,7 +61,7 @@ module RSpec
           end
 
           trace.allocated.each do |klass, allocation|
-            next unless acceptable = @allocations[klass]
+            next unless (acceptable = @allocations[klass])
 
             check(allocation.count, acceptable[:count]) do |expected|
               @errors << "allocated #{allocation.count} #{klass} instances, #{allocation.size} bytes, #{expected} instances"

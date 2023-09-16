@@ -91,7 +91,7 @@ module RSpec
 
         # All allocated objects, including those freed in the last GC:
         allocated.each do |object|
-          if klass = find_base(object)
+          if (klass = find_base(object))
             @allocated[klass] << object
           else
             # If the user specified classes, but we can't pin this allocation to a specific class, we issue a warning.
@@ -107,7 +107,7 @@ module RSpec
 
         # Retained objects are still alive after a final GC:
         retained.each do |object|
-          if klass = find_base(object)
+          if (klass = find_base(object))
             @retained[klass] << object
           end
         end
