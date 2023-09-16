@@ -117,5 +117,7 @@ module RSpec
         end
       end
     end
+
+    private_constant :Allocation
   end
 end

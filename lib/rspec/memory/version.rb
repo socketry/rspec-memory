@@ -6,5 +6,7 @@
 module RSpec
   module Memory
     VERSION = '1.0.4'
+
+    public_constant :VERSION
   end
 end

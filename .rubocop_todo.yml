@@ -89,13 +89,6 @@ Lint/StructNewOverride:
   Exclude:
     - 'lib/rspec/memory/trace.rb'
 
-# Offense count: 2
-# Configuration parameters: IgnoreModules.
-Style/ConstantVisibility:
-  Exclude:
-    - 'lib/rspec/memory/trace.rb'
-    - 'lib/rspec/memory/version.rb'
-
 # Offense count: 3
 # Configuration parameters: AllowedConstants.
 Style/Documentation:
