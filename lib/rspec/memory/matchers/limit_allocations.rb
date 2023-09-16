@@ -55,13 +55,17 @@ module RSpec
             # If the spec specifies a total limit, we have a limit which we can enforce which takes all allocations into account:
             total = trace.total
             
-            check(total.count, @count) do |expected|
-              @errors << "allocated #{total.count} instances, #{total.size} bytes, #{expected} instances"
-            end if @count
+            if @count
+              check(total.count, @count) do |expected|
+                @errors << "allocated #{total.count} instances, #{total.size} bytes, #{expected} instances"
+              end
+            end
             
-            check(total.size, @size) do |expected|
-              @errors << "allocated #{total.count} instances, #{total.size} bytes, #{expected} bytes"
-            end if @size
+            if @size
+              check(total.size, @size) do |expected|
+                @errors << "allocated #{total.count} instances, #{total.size} bytes, #{expected} bytes"
+              end
+            end
           else
             # Otherwise unspecified allocations are considered an error:
             trace.ignored.each do |klass, allocation|

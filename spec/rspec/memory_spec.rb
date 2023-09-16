@@ -37,13 +37,15 @@ RSpec.describe RSpec::Memory do
       end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /it was not specified/)
     end
     
-    it 'should exceed specified count limit' do
-      expect do
+    if RSpec::Memory::Trace.supported?
+      it 'should exceed specified count limit' do
         expect do
-          6.times{String.new}
-        end.to limit_allocations(String => 4)
-      end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /expected exactly 4 instances/)
-    end if RSpec::Memory::Trace.supported?
+          expect do
+            6.times{String.new}
+          end.to limit_allocations(String => 4)
+        end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /expected exactly 4 instances/)
+      end
+    end
     
     it 'should be within specified count range' do
       expect do
