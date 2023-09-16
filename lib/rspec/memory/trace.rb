@@ -67,9 +67,7 @@ module RSpec
         allocations = []
 
         ObjectSpace.each_object do |object|
-          if ObjectSpace.allocation_generation(object) == generation
-            allocations << object
-          end
+          allocations << object if ObjectSpace.allocation_generation(object) == generation
         end
 
         allocations

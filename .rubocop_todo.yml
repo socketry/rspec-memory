@@ -201,13 +201,6 @@ Style/EmptyLiteral:
   Exclude:
     - 'spec/rspec/memory_spec.rb'
 
-# Offense count: 3
-# This cop supports safe autocorrection (--autocorrect).
-Style/IfUnlessModifier:
-  Exclude:
-    - 'lib/rspec/memory/matchers/limit_allocations.rb'
-    - 'lib/rspec/memory/trace.rb'
-
 # Offense count: 14
 Style/MethodCalledOnDoEndBlock:
   Exclude:

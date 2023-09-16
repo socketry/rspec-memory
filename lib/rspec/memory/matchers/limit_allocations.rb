@@ -38,13 +38,9 @@ module RSpec
         private def check(value, limit)
           case limit
           when Range
-            unless limit.include? value
-              yield "expected within #{limit}"
-            end
+            yield "expected within #{limit}" unless limit.include? value
           when Integer
-            unless value == limit
-              yield "expected exactly #{limit}"
-            end
+            yield "expected exactly #{limit}" unless value == limit
           end
         end
 
