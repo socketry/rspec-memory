@@ -16,4 +16,5 @@ end
 group :test do
 	gem "bake-test"
 	gem "bake-test-external"
+	gem "guard-rspec", "~> 4.7"
 end
