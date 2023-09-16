@@ -32,7 +32,7 @@ module RSpec
         def of(klass, **limits)
           @allocations[klass] = limits
           
-          return self
+          self
         end
         
         private def check(value, limit)
@@ -81,7 +81,7 @@ module RSpec
             end
           end
           
-          return @errors.empty?
+          @errors.empty?
         end
         
         def failure_message

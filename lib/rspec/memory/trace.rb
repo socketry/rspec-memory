@@ -41,7 +41,7 @@ module RSpec
         def self.capture(*args, &block)
           yield
           
-          return nil
+          nil
         end
       end
       
@@ -72,7 +72,7 @@ module RSpec
           end
         end
         
-        return allocations
+        allocations
       end
       
       def find_base(object)
