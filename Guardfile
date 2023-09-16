@@ -37,6 +37,6 @@ RUBOCOP_CONFIG = {
 
 guard :rubocop, RUBOCOP_CONFIG do
   watch(/.+\.rb$/)
-  watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| ::File.dirname(m[0]) }
+  watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
   watch('Guardfile')
 end

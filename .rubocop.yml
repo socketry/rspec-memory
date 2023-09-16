@@ -18,6 +18,9 @@ Layout/RedundantLineBreak:
 Style/MissingElse:
   Enabled: false
 
+Lint/ConstantResolution:
+  Enabled: false
+
 Layout/LineLength:
   Max: 129
 
