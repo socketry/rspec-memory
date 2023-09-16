@@ -11,13 +11,13 @@ ruby '3.2.2'
 gemspec
 
 group :maintenance, optional: true do
-	gem "bake-gem"
-	gem "bake-modernize"
+  gem "bake-gem"
+  gem "bake-modernize"
 end
 
 group :test do
-	gem "bake-test"
-	gem "bake-test-external"
-	gem "guard-rspec", "~> 4.7"
-	gem "guard-rubocop", "~> 1.5"
+  gem "bake-test"
+  gem "bake-test-external"
+  gem "guard-rspec", "~> 4.7"
+  gem "guard-rubocop", "~> 1.5"
 end

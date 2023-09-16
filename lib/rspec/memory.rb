@@ -6,5 +6,5 @@
 require_relative 'memory/matchers/limit_allocations'
 
 RSpec.shared_context RSpec::Memory do
-	include RSpec::Memory::Matchers
+  include RSpec::Memory::Matchers
 end
