@@ -229,12 +229,6 @@ Style/ArgumentsForwarding:
     - 'lib/rspec/memory/matchers/limit_allocations.rb'
     - 'lib/rspec/memory/trace.rb'
 
-# Offense count: 4
-# This cop supports safe autocorrection (--autocorrect).
-Style/Attr:
-  Exclude:
-    - 'lib/rspec/memory/trace.rb'
-
 # Offense count: 2
 # Configuration parameters: IgnoreModules.
 Style/ConstantVisibility:
