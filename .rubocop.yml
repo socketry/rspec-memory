@@ -4,6 +4,7 @@ AllCops:
   NewCops: enable
   SuggestExtensions: true
   EnabledByDefault: true
+  TargetRubyVersion: 3.2.2
 
 Style/Copyright:
   Enabled: false
