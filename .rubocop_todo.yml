@@ -84,12 +84,6 @@ Layout/RedundantLineBreak:
   Exclude:
     - 'Guardfile'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Layout/SpaceAfterComma:
-  Exclude:
-    - 'lib/rspec/memory/trace.rb'
-
 # Offense count: 8
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.

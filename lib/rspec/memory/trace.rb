@@ -19,7 +19,7 @@ module RSpec
       end
       
       def self.default_hash
-        Hash.new{|h,k| h[k] = Allocation.new(0, 0)}
+        Hash.new{|h, k| h[k] = Allocation.new(0, 0)}
       end
     end
     
