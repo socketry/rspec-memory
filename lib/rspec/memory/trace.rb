@@ -38,7 +38,7 @@ module RSpec
           end
         end
       else
-        def self.capture(*args, &)
+        def self.capture(*_args, &)
           yield
 
           nil
