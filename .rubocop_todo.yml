@@ -29,14 +29,6 @@ Bundler/GemVersion:
   Exclude:
     - 'gems.rb'
 
-# Offense count: 2
-# Configuration parameters: EnforcedStyle, Include, AllowedGems.
-# SupportedStyles: required, forbidden
-# Include: **/*.gemspec
-Gemspec/DependencyVersion:
-  Exclude:
-    - 'rspec-memory.gemspec'
-
 # Offense count: 1
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: enums
