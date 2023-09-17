@@ -15,6 +15,10 @@ group :maintenance, optional: true do
   gem 'bake-modernize'
 end
 
+group :development do
+  gem 'covered', '~> 0.25.0', require: false
+end
+
 group :test do
   gem 'bake-test'
   gem 'bake-test-external'

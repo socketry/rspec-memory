@@ -37,14 +37,6 @@ Gemspec/DependencyVersion:
   Exclude:
     - 'rspec-memory.gemspec'
 
-# Offense count: 2
-# Configuration parameters: EnforcedStyle, AllowedGems, Include.
-# SupportedStyles: Gemfile, gems.rb, gemspec
-# Include: **/*.gemspec, **/Gemfile, **/gems.rb
-Gemspec/DevelopmentDependencies:
-  Exclude:
-    - 'rspec-memory.gemspec'
-
 # Offense count: 1
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: enums
