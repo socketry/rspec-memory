@@ -11,8 +11,8 @@ ruby '3.2.2'
 gemspec
 
 group :maintenance, optional: true do
-  gem 'bake-gem'
-  gem 'bake-modernize'
+  gem 'bake-gem', '~> 0.4.0'
+  gem 'bake-modernize', '~> 0.17.8'
 end
 
 group :development do
@@ -20,8 +20,8 @@ group :development do
 end
 
 group :test do
-  gem 'bake-test'
-  gem 'bake-test-external'
+  gem 'bake-test', '~> 0.2.0'
+  gem 'bake-test-external', '~> 0.3.3'
   gem 'guard-rspec', '~> 4.7'
   gem 'guard-rubocop', '~> 1.5'
 end

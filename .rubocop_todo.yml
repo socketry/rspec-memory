@@ -21,14 +21,6 @@ Bundler/GemFilename:
   Exclude:
     - 'gems.rb'
 
-# Offense count: 4
-# Configuration parameters: EnforcedStyle, Include, AllowedGems.
-# SupportedStyles: required, forbidden
-# Include: **/*.gemfile, **/Gemfile, **/gems.rb
-Bundler/GemVersion:
-  Exclude:
-    - 'gems.rb'
-
 # Offense count: 1
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: enums
