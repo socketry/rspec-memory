@@ -62,7 +62,7 @@ RSpec.describe RSpec::Memory do
         expect do
           6.times { String.new }
         end.to limit_allocations(String => 1..3)
-      end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /expected within 1..3 instances/)
+      end.to raise_error(RSpec::Expectations::ExpectationNotMetError, /expected within 1\.\.3 instances/)
     end
 
     it 'should not exceed specified size limit' do
