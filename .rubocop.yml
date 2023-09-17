@@ -44,3 +44,11 @@ Metrics/PerceivedComplexity:
 Style/MethodCalledOnDoEndBlock:
   Exclude:
     - 'spec/**/*_spec.rb'
+
+Style/ClassEqualityComparison:
+  Exclude:
+    - 'lib/rspec/memory/trace.rb'
+
+Style/StringHashKeys:
+  Exclude:
+    - 'spec/rspec/memory_spec.rb'

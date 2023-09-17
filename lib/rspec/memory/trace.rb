@@ -70,7 +70,7 @@ module RSpec
       end
 
       def find_base(object)
-        @klasses.find { |klass| object.is_a? klass }
+        @klasses.find { |klass| (klass.is_a?(String) && object.class.name == klass) || object.is_a?(klass) }
       end
 
       def capture(&)
