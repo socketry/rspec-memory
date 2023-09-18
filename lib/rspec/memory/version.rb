@@ -4,7 +4,9 @@
 # Copyright, 2019-2023, by Samuel Williams.
 
 module RSpec
-	module Memory
-		VERSION = "1.0.4"
-	end
+  module Memory
+    VERSION = '1.0.4'
+
+    public_constant :VERSION
+  end
 end

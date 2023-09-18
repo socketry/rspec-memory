@@ -1,0 +1,54 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: true
+  EnabledByDefault: true
+  TargetRubyVersion: 3.2.2
+
+Style/Copyright:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Layout/RedundantLineBreak:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 129
+
+Metrics/MethodLength:
+  Max: 29
+
+Metrics/AbcSize:
+  Max: 37
+
+Metrics/BlockLength:
+  Max: 12
+  Exclude:
+    - 'spec/**/*_spec.rb'
+
+Metrics/CyclomaticComplexity:
+  Max: 9
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Style/MethodCalledOnDoEndBlock:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+
+Style/ClassEqualityComparison:
+  Exclude:
+    - 'lib/rspec/memory/trace.rb'
+
+Style/StringHashKeys:
+  Exclude:
+    - 'spec/rspec/memory_spec.rb'
